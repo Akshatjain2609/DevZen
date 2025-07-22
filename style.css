@@ -1,0 +1,197 @@
+/* Animated Gradient Background */
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(-45deg, #c3cfe2, #e0c3fc, #d4fc79, #96e6a1);
+  background-size: 400% 400%;
+  animation: gradientBG 16s ease infinite;
+  transition: background 0.5s;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+body.dark-mode {
+  background: linear-gradient(-45deg, #232526, #414345, #434343, #000000);
+  color: #f5f5f5;
+}
+
+.container {
+  background: rgba(255,255,255,0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  max-width: 420px;
+  margin: 48px auto;
+  padding: 36px 32px 32px 32px;
+  text-align: center;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.dark-mode .container {
+  background: rgba(34, 34, 34, 0.92);
+  color: #f5f5f5;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  color: #5a5a5a;
+}
+body.dark-mode h1 {
+  color: #e0c3fc;
+}
+
+#quote, #affirmation {
+  font-size: 1.15rem;
+  margin: 18px 0 12px 0;
+  color: #333;
+  font-style: italic;
+  min-height: 32px;
+  transition: color 0.5s;
+}
+body.dark-mode #quote, body.dark-mode #affirmation {
+  color: #d4fc79;
+}
+
+button {
+  background: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%);
+  border: none;
+  border-radius: 20px;
+  color: #333;
+  padding: 10px 22px;
+  margin: 8px 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(160, 160, 160, 0.08);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  outline: none;
+}
+button:hover, button:focus {
+  background: linear-gradient(90deg, #d4fc79 0%, #96e6a1 100%);
+  color: #222;
+  transform: translateY(-2px) scale(1.04);
+}
+body.dark-mode button {
+  background: linear-gradient(90deg, #434343 0%, #232526 100%);
+  color: #f5f5f5;
+}
+body.dark-mode button:hover, body.dark-mode button:focus {
+  background: linear-gradient(90deg, #232526 0%, #434343 100%);
+  color: #d4fc79;
+}
+
+input[type="range"] {
+  accent-color: #8ec5fc;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+body.dark-mode input[type="range"] {
+  accent-color: #d4fc79;
+}
+
+#timerSection, #affirmationSection, #favoritesSection {
+  margin: 18px 0 0 0;
+  padding: 10px 0 0 0;
+}
+
+#timerDisplay {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #5a5a5a;
+  margin-left: 10px;
+}
+body.dark-mode #timerDisplay {
+  color: #d4fc79;
+}
+
+#favoritesSection {
+  background: rgba(240,240,240,0.7);
+  border-radius: 12px;
+  margin-top: 18px;
+  padding: 10px 0 8px 0;
+  box-shadow: 0 1px 4px rgba(160, 160, 160, 0.07);
+}
+body.dark-mode #favoritesSection {
+  background: rgba(34,34,34,0.7);
+}
+
+#favoritesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 120px;
+  overflow-y: auto;
+}
+#favoritesList li {
+  padding: 6px 0;
+  border-bottom: 1px solid #e0c3fc;
+  color: #5a5a5a;
+  font-size: 0.98rem;
+  text-align: left;
+}
+body.dark-mode #favoritesList li {
+  border-bottom: 1px solid #434343;
+  color: #d4fc79;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 98vw;
+    padding: 18px 4vw 18px 4vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #555;
+  min-height: 60px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #a0c4ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #80b3ff;
+}

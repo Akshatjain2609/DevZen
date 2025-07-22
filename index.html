@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevZen – Stress-Free Zone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to DevZen 🧘‍♂️</h1>
+    <p id="quote">Loading a calming quote...</p>
+    <button onclick="newQuote()">✨ New Quote</button>
+    <button onclick="playMusic()">🎵 Play Calm Music</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.5" title="Volume" style="vertical-align: middle; width: 100px;" />
+    <audio id="calmMusic" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <br><br>
+    <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Toggle Dark/Light Mode</button>
+    <br><br>
+    <div id="timerSection">
+      <label for="meditationTime">🕒 Meditation Timer (minutes): </label>
+      <input type="number" id="meditationTime" min="1" max="60" value="5" style="width: 50px;" />
+      <button onclick="startTimer()">Start</button>
+      <span id="timerDisplay"></span>
+    </div>
+    <br>
+    <div id="affirmationSection">
+      <p id="affirmation">Loading affirmation...</p>
+      <button onclick="newAffirmation()">💡 New Affirmation</button>
+    </div>
+    <br>
+    <button onclick="saveFavoriteQuote()">❤️ Save Favorite Quote</button>
+    <div id="favoritesSection">
+      <h3>Favorite Quotes</h3>
+      <ul id="favoritesList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
